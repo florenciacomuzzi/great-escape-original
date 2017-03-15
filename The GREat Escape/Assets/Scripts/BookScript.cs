@@ -18,6 +18,7 @@ public class BookScript : MonoBehaviour {
 	
 	// indices of already picked books so they aren't reused and can be accessed for review
 	public List<int> reviewIndices; 
+	public static List<int> indexUsed;
 
 	public int numBooks;
 	public int maxBooks;
@@ -96,19 +97,45 @@ public class BookScript : MonoBehaviour {
 
 	method generates random number 
 	*/
+
+
 	public string pickWord(){
 		print("in pickWord after colliding with book");
 		//int randomNumber = Random.Range (0, words.Length);
 
-		while (isWordUsed (currentBook)) {
-			currentBook++;
+		Scene scene = SceneManager.GetActiveScene();
+		print("Active scene is " + scene.name);
+		int chosenWordIndex = -1;
+
+		if(scene.name == "Level1"){
+			chosenWordIndex = Random.Range(0,4);
+			while(isWordUsed(chosenWordIndex)){ //make sure you haven't displayed this fact already
+				chosenWordIndex = Random.Range(0,4);
+			}
+
 		}
 
-		reviewIndices.Add (currentBook); // add index to the list so it won't be picked more than once
-			
+		if(scene.name == "Level2"){
+			chosenWordIndex = Random.Range(5,9);
+			while(isWordUsed(chosenWordIndex)){
+				chosenWordIndex = Random.Range(5,9);
+			}
 
+		}
+		if(scene.name == "Level3"){
+			chosenWordIndex = Random.Range(10,14);
+			while(isWordUsed(chosenWordIndex)){
+				chosenWordIndex = Random.Range(10,14);
+			}
+		}
 
-		return facts [currentBook];
+//		while (isWordUsed (chosenFactIndex)) {
+//			currentBook++;
+//		}
+
+		reviewIndices.Add (chosenWordIndex); // add index to the list so it won't be picked more than once
+
+		return facts [chosenWordIndex];
 	}
 
 
