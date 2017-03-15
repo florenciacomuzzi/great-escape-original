@@ -49,9 +49,9 @@ public class BookScript : MonoBehaviour {
 			"All pointers in a program are likely going to occupy the same amount of space in memory (the size in memory of a pointer depends on the platform where the program runs).", 
 			"* is called the dereference operator.", 
 			"All pointers in a program are likely going to occupy the same amount of space in memory (the size in memory of a pointer depends on the platform where the program runs).", 
-			"The delete[] operator 	deallocates the memory block pointed to by ptr (if not null), releasing the storage space previously allocated to it by a call to operator new[] and rendering that pointer location invalid. For example, delete ptr1;", 
+			"The delete[] operator deallocates the memory block pointed to by ptr (if not null), releasing the storage space previously allocated to it by a call to operator new[] and rendering that pointer location invalid. For example, delete ptr1;", 
 			"Memory leaks occur when new memory is allocated dynamically and never deallocated.", 
-			"A dangling pointer is a pointer whose value is the address of memory that the program no longer owns).", //end of  level1 facts
+			"A dangling pointer is a pointer whose value is the address of memory that the program no longer owns.", //end of  level1 facts
 			"The & is an operator that returns the memory address of its operand. For example, if var is an integer variable, then &var is its address.", 
 			"When you declare a pointer variable, its content is not initialized. You need to initialize a pointer by assigning it a valid address. This is normally done via the address-of operator (&). For example, if pNumber is an int pointer, *pNumber returns the int value 'pointed to' by pNumber. For example,\nint number = 88;\nint * pNumber;\npNumber = &number;", 
 			"The indirection operator is *. This operator returns the value stored in the address kept in the pointer variable. For example, the following would print “99”:\nint *pNumber = 99;\ncout << *pNumber << endl;", 

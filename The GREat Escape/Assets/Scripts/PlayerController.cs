@@ -132,7 +132,9 @@ public class PlayerController : MonoBehaviour {
 			addBook (other.name);
 //			numBooks++;
 //			numBooksCollected.text = "Books: " + numBooks + "/" + maxBooks;
-			BookScript.bookControl.updateBookTracker();
+
+			//BookScript.bookControl.updateBookTracker();
+
 			collectSound.Play ();
 
 			other.GetComponent<SpriteRenderer> ().enabled = false;
