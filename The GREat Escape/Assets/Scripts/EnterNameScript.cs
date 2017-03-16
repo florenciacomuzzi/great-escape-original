@@ -4,7 +4,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class EnterNameScript : MonoBehaviour {
-	/*
+
+	public GoogleAnalyticsV4 googleAnalytics;
+
     public Text NameInputFieldText;
     public Text RequiredText;
     public int ver;
@@ -32,7 +34,7 @@ public class EnterNameScript : MonoBehaviour {
         }
 
         PlayerPrefs.SetString("CurrentPlayer", Name);
-        ver = Version.getVersion();
+        //ver = Version.getVersion();
         Debug.Log("version = " + ver);
         SceneManager.LoadScene("Level1");
     }
@@ -41,5 +43,5 @@ public class EnterNameScript : MonoBehaviour {
     {
         SceneManager.LoadScene("TitleScreen");
     }
-    */
+
 }
