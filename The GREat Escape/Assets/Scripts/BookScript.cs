@@ -99,7 +99,7 @@ public class BookScript : MonoBehaviour {
 	*/
 
 
-	public string pickWord(){
+		public string pickWord(){
 		print("in pickWord after colliding with book");
 		//int randomNumber = Random.Range (0, words.Length);
 
@@ -108,26 +108,35 @@ public class BookScript : MonoBehaviour {
 		int chosenWordIndex = -1;
 
 		if(scene.name == "Level1"){
-			chosenWordIndex = Random.Range(0,4);
+			chosenWordIndex = Random.Range(0,5);
+			print("in BookScript outside while 1. index is ");
+			print (chosenWordIndex);
 			while(isWordUsed(chosenWordIndex)){ //make sure you haven't displayed this fact already
-				chosenWordIndex = Random.Range(0,4);
+				chosenWordIndex = Random.Range(0,5);
+				print("in BookScript while 1. index is ");
+				print (chosenWordIndex);
 			}
 
 		}
 
 		if(scene.name == "Level2"){
-			chosenWordIndex = Random.Range(5,9);
+			chosenWordIndex = Random.Range(5,10);
 			while(isWordUsed(chosenWordIndex)){
-				chosenWordIndex = Random.Range(5,9);
+				chosenWordIndex = Random.Range(5,10);
+				print("in BookScript while 2. index is ");
+				print (chosenWordIndex);
 			}
 
 		}
 		if(scene.name == "Level3"){
-			chosenWordIndex = Random.Range(10,14);
+			chosenWordIndex = Random.Range(10,15);
 			while(isWordUsed(chosenWordIndex)){
-				chosenWordIndex = Random.Range(10,14);
+				chosenWordIndex = Random.Range(10,15);
+				print("in BookScript while 3. index is ");
+				print (chosenWordIndex);
 			}
 		}
+
 
 //		while (isWordUsed (chosenFactIndex)) {
 //			currentBook++;
