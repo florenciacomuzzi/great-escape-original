@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class BossQuestions : MonoBehaviour {
 
+	public GoogleAnalyticsV4 googleAnalytics;
+
 	public class Question
 	{
 		public string question;
@@ -66,6 +68,7 @@ public class BossQuestions : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		questions = new List<Question>();
+
 		questions.Add (new Question ("Choose the correct statement to define a 1d array of pointers to double with 10 elements. ",
 			"*double ptrarr[10]", "double *[10] ptrarr", "double int *ptrarr[10]", "double *prtarr[10]", "3"));
 		questions.Add (new Question ("Which of the following are pointer variables in the following definition?\n\tString *pName, name, address ",
@@ -94,6 +97,7 @@ public class BossQuestions : MonoBehaviour {
 			"free(ptrarr)", "delete ptrarr", "delete *ptrarr", " ~ *ptrarr", "1"));
 		questions.Add (new Question ("Missing Question 5 of level 3",
 			"free(ptrarr)", "delete ptrarr", "delete *ptrarr", " ~ *ptrarr", "1"));  //end of level 3 questions
+		
 		questions.Add (new Question ("Choose the correct statement to free a 1d array of pointers, ptrarr to double with 10 elements.",
 			"free(ptrarr)", "delete ptrarr", "delete *ptrarr", " ~ *ptrarr", "1"));
 		questions.Add (new Question ("You write the following code:int n = 5; \nint *ptrToN = &n;\nWhat is the name of the operator in this fragment &n ?",
@@ -106,7 +110,6 @@ public class BossQuestions : MonoBehaviour {
 			"5", "hexadecimal address of n", "binary address of 5", "address of 5", "1")); 
 		questions.Add (new Question ("In the following code, baz = *foo \n'*' is called the ",
 			"dot operator",  "star operator", "dereference operator", "Asterisk operator", "2")); 
-		
 		questions.Add (new Question ("* is the _________ operator, and can be read as 'value pointed to by' ? ",
 			"dereference", "value at start", "reference to malloc", "address-of", "0")); 
 		questions.Add (new Question ("Choose the correct statement to declare a pointer that points to another pointer ? ",
@@ -366,14 +369,33 @@ public class BossQuestions : MonoBehaviour {
 		if (questions[indexUsed[indexUsed.Count-1]].answer.Equals (playerAnswer)) {
 			return true;
 		}
+
+		
+		googleAnalytics.LogEvent (new EventHitBuilder ()
+			.SetEventCategory (playerAnswer)
+			.SetEventAction (indexUsed.ToString())//indexUsed - cast to string
+			.SetEventLabel ("Player Name")//not sure what this is supposed to be
+			.SetEventValue (1)); //When we create mode for game, it should be entered HERE
+			//ver = Version.getVersion();
+
+
+		/*LOG INCORRECT answer only
+		* category incorrectAnswer which choice selected
+		 * action questionIndex - index of question used
+		 * label Name - ??????
+		 * vaule answer (incorrect) - ????? index of answer seleceted?
+		 * /*/	
 		return false;
+
+		
 	}
 
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
 			//parseCorrectWords ();
-			pickQuestion();
+			pickQuestion ();
 		}
 	}
+	
 }

@@ -34,6 +34,11 @@ public class EnterNameScript : MonoBehaviour {
         }
 
         PlayerPrefs.SetString("CurrentPlayer", Name);
+		googleAnalytics.LogEvent (new EventHitBuilder ()
+			.SetEventCategory ("username")
+			.SetEventAction ("Action")
+			.SetEventLabel (Name)
+			.SetEventValue (1)); //When we create mode for game, it should be entered HERE
         //ver = Version.getVersion();
         Debug.Log("version = " + ver);
         SceneManager.LoadScene("Level1");
