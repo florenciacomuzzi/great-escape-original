@@ -32,6 +32,8 @@ public class EnterNameScript : MonoBehaviour {
             RequiredText.text = "*Required";
             return;
         }
+        ver = Version.Instance.version;
+        Debug.Log("in EnterNameScript: version = " + ver);
 
         PlayerPrefs.SetString("CurrentPlayer", Name);
 		googleAnalytics.LogEvent (new EventHitBuilder ()
