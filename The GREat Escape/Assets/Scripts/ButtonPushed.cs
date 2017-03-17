@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ButtonPushed : MonoBehaviour {
 
@@ -12,6 +13,8 @@ public class ButtonPushed : MonoBehaviour {
 	public GameButtons clear;
 	public FeedbackPanel fbPanel;
 	public BossQuestions bossQ;
+
+	public GoogleAnalyticsV4 googleAnalytics;
 
 	float timer = 0;
 
@@ -90,6 +93,19 @@ public class ButtonPushed : MonoBehaviour {
 		if (chosen != (int)correct_answer)
 		{	
 			print("chose wrong answer");
+
+			int questionID_int = BossQuestions.getQuestionID();//BossQuestions.Instance.indexUsed.Item[questionID_idx];
+			//string questionID = toString(qID);
+			string questionID = questionID_int.ToString();
+		
+
+			PlayerPrefs.SetString("CurrentPlayer", Name);
+			googleAnalytics.LogEvent (new EventHitBuilder ()
+				.SetEventCategory ("QuestionAnsweredIncorrectly")
+				.SetEventAction (EnterNameScript.Instance.Name)
+				.SetEventLabel (questionID)
+				.SetEventValue (chosen)); //When we create mode for game, it should be entered HERE
+
 			feedback = getWrongFeedback();
 			print("feedback received: " + getWrongFeedback());
 			//Health.changeBar (10);	

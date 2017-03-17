@@ -32,7 +32,7 @@ public class Version : MonoBehaviour {
 
 	//private method
 	int getVersion() {
-		version = Random.Range(0,3);
+		version = Random.Range(1,4);
 		Debug.Log("in getVersion: version = " + version);
 		return version;
 	}

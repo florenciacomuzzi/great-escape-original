@@ -7,13 +7,17 @@ public class EnterNameScript : MonoBehaviour {
 
 	public GoogleAnalyticsV4 googleAnalytics;
 
+    public static EnterNameScript Instance;
+
     public Text NameInputFieldText;
     public Text RequiredText;
+    public string Name;
     public int ver;
 
 	// Use this for initialization
 	void Start () {
         ver = -1;
+        Name = null;
 	
 	}
 	
@@ -26,7 +30,8 @@ public class EnterNameScript : MonoBehaviour {
     //Saves it in PlayerPrefs and continues to Level1 scene otherwise
     public void Continue()
     {
-        string Name = NameInputFieldText.text.Trim();
+        Name = NameInputFieldText.text.Trim();
+        Debug.Log("Name is " + Name);
         if (string.IsNullOrEmpty(Name))
         {
             RequiredText.text = "*Required";
@@ -37,9 +42,9 @@ public class EnterNameScript : MonoBehaviour {
 
         PlayerPrefs.SetString("CurrentPlayer", Name);
 		googleAnalytics.LogEvent (new EventHitBuilder ()
-			.SetEventCategory ("username")
-			.SetEventAction ("Action")
-			.SetEventLabel (Name)
+			.SetEventCategory ("ModeOfPlay")
+			.SetEventAction (Name)
+			.SetEventLabel ("")
 			.SetEventValue (ver)); //When we create mode for game, it should be entered HERE
         SceneManager.LoadScene("Level1");
     }

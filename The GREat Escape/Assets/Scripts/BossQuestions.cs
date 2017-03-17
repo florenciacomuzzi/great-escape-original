@@ -151,6 +151,11 @@ public class BossQuestions : MonoBehaviour {
 	}
 
 
+	public static int getQuestionID() {
+		int size = indexUsed.Count;
+		return indexUsed[size-1];
+	}
+
 
 	public string getAnswer() {
 		return questions[indexUsed[indexUsed.Count-1]].answer;
@@ -257,6 +262,7 @@ public class BossQuestions : MonoBehaviour {
 	public string getQuestionTempStr(){
 		return questionTemp;
 	}
+
 
 	public int pickQuestion(){
 		print("inside pickQuestion");
