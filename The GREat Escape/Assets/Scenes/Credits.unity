@@ -646,9 +646,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Big thank you to the game creators:\nKwan Holloway, Elina Shirani, and
-    Alex Aquino\n\nSprites & Assets: OpenGameArt and kenney.nl\n\nSounds & Music:
-    Flashkit, Bensound:\nhttp://www.bensound.com/royalty-free-music \n"
+  m_Text: Big thanks to our CREU advisors!
 --- !u!222 &1837600950
 CanvasRenderer:
   m_ObjectHideFlags: 0
