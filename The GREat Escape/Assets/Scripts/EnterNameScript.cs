@@ -40,9 +40,7 @@ public class EnterNameScript : MonoBehaviour {
 			.SetEventCategory ("username")
 			.SetEventAction ("Action")
 			.SetEventLabel (Name)
-			.SetEventValue (1)); //When we create mode for game, it should be entered HERE
-        //ver = Version.getVersion();
-        Debug.Log("version = " + ver);
+			.SetEventValue (ver)); //When we create mode for game, it should be entered HERE
         SceneManager.LoadScene("Level1");
     }
 
