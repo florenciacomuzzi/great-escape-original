@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour {
 					.SetEventCategory ("LevelReached")
 					.SetEventAction (EnterNameScript.Instance.Name)
 					.SetEventLabel ("")
-					.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+					.SetEventValue (2)); //When we create mode for game, it should be entered HERE
 
 				SceneManager.LoadScene ("Level2");
 			}
@@ -187,7 +187,7 @@ public class PlayerController : MonoBehaviour {
 					.SetEventCategory ("LevelReached")
 					.SetEventAction (EnterNameScript.Instance.Name)
 					.SetEventLabel ("")
-					.SetEventValue ("Level 3")); //When we create mode for game, it should be entered HERE
+					.SetEventValue (3)); //When we create mode for game, it should be entered HERE
 
 				SceneManager.LoadScene ("Level3");
 		}

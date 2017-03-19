@@ -6,6 +6,8 @@ public class MenuButtons : MonoBehaviour {
 
 	public static int currLevel = 1;
 
+	public GoogleAnalyticsV4 googleAnalytics;
+
 	public void PlayGame()
 	{
 		SceneManager.LoadScene ("EnterName");
@@ -87,7 +89,7 @@ public class MenuButtons : MonoBehaviour {
 				.SetEventCategory ("LevelReached")
 				.SetEventAction (EnterNameScript.Instance.Name)
 				.SetEventLabel ("")
-				.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+				.SetEventValue (2)); //When we create mode for game, it should be entered HERE
 
 		SceneManager.LoadScene ("Level2");
 	}

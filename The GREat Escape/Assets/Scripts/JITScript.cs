@@ -63,7 +63,7 @@ public class JITScript : MonoBehaviour {
 					.SetEventCategory ("LevelReached")
 					.SetEventAction (EnterNameScript.Instance.Name)
 					.SetEventLabel ("")
-					.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+					.SetEventValue (2)); //When we create mode for game, it should be entered HERE
 
 				SceneManager.LoadScene ("Level2");
 				break;
