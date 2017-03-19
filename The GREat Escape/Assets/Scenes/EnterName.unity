@@ -459,6 +459,7 @@ MonoBehaviour:
   googleAnalytics: {fileID: 1565864073}
   NameInputFieldText: {fileID: 2007203933}
   RequiredText: {fileID: 1890041662}
+  Name: 
   ver: 0
 --- !u!114 &787327255
 MonoBehaviour:
@@ -471,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b3bb2a17f0c4471b6069efa5120af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  googleAnalytics: {fileID: 1565864073}
 --- !u!1 &807877265
 GameObject:
   m_ObjectHideFlags: 0

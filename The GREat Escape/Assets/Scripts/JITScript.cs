@@ -30,8 +30,7 @@ public class JITScript : MonoBehaviour {
 				Destroy (this.gameObject);
 				break;
 			case "Objective":
-				wordDisplay.text = "Collect all of the books in the world and study their contents. \n\n Watch out for enemies and dangerous objects. Press the left and right arrow to move.";
-				Time.timeScale = 0.0f;
+				wordDisplay.text = "You may encounter some helpful people along your journey...\nMake sure you take their advice.";
 				Destroy (this.gameObject);
 				break;
 			case "Controls":
