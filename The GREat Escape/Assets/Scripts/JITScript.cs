@@ -8,6 +8,8 @@ public class JITScript : MonoBehaviour {
 
 	public Text wordDisplay;
 
+	public GoogleAnalyticsV4 googleAnalytics;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -49,6 +51,20 @@ public class JITScript : MonoBehaviour {
 				break;
 			case "Level2JIT":
 				BookScript.bookControl.ResetBooks ();
+				
+				/*
+				Category -- LevelReached
+				Action --name (e.g. chavashulman@gmail.com)
+				Label -- blank
+				Value -- level # 
+				This should be added just before a level is loaded. 
+				*/
+				googleAnalytics.LogEvent (new EventHitBuilder ()
+					.SetEventCategory ("LevelReached")
+					.SetEventAction (EnterNameScript.Instance.Name)
+					.SetEventLabel ("")
+					.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+
 				SceneManager.LoadScene ("Level2");
 				break;
 			

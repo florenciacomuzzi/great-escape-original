@@ -70,6 +70,9 @@ public class ButtonPushed : MonoBehaviour {
 		print (Name);
 		chosen = int.Parse (Name);
 
+		int questionID_int = BossQuestions.getQuestionID();//BossQuestions.Instance.indexUsed.Item[questionID_idx];
+		string questionID = questionID_int.ToString();
+
 
 		/*
 		if player chooses correct answer, 
@@ -77,6 +80,15 @@ public class ButtonPushed : MonoBehaviour {
 		*/
 		if (chosen == (int)correct_answer) {
 			print("chose correct answer");
+
+			PlayerPrefs.SetString("CurrentPlayer", Name);
+			
+			googleAnalytics.LogEvent (new EventHitBuilder ()
+				.SetEventCategory ("QuestionsAnsweredCorrectly")
+				.SetEventAction (EnterNameScript.Instance.Name)
+				.SetEventLabel (questionID)
+				.SetEventValue (chosen)); //When we create mode for game, it should be entered HERE
+
 			feedback = getCorrectFeedback();
 			print("feedback received: " + feedback);
 			player.rightSound.Play ();
@@ -94,9 +106,7 @@ public class ButtonPushed : MonoBehaviour {
 		{	
 			print("chose wrong answer");
 
-			int questionID_int = BossQuestions.getQuestionID();//BossQuestions.Instance.indexUsed.Item[questionID_idx];
-			//string questionID = toString(qID);
-			string questionID = questionID_int.ToString();
+			
 		
 
 			PlayerPrefs.SetString("CurrentPlayer", Name);

@@ -4769,8 +4769,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
-  panel: {fileID: 0}
-  qCanvas: {fileID: 0}
+  panel: {fileID: 1609127712}
+  qCanvas: {fileID: 1368145745}
 --- !u!114 &1616645687
 MonoBehaviour:
   m_ObjectHideFlags: 0

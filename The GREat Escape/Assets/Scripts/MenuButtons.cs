@@ -75,7 +75,20 @@ public class MenuButtons : MonoBehaviour {
 		SceneManager.LoadScene ("Review1");
 	}
 
+	/*
+	Category -- LevelReached
+	Action --name (e.g. chavashulman@gmail.com)
+	Label -- blank
+	Value -- level # 
+	*/
 	public void GoToLevel2(){
+
+		googleAnalytics.LogEvent (new EventHitBuilder ()
+				.SetEventCategory ("LevelReached")
+				.SetEventAction (EnterNameScript.Instance.Name)
+				.SetEventLabel ("")
+				.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+
 		SceneManager.LoadScene ("Level2");
 	}
 

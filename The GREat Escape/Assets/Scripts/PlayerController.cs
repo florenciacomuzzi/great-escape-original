@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour {
 	public GameButtons gameButton;// object so player can pause game
 	//public BookScript currBook;
 
+	public GoogleAnalyticsV4 googleAnalytics;
+
 	public float moveSpeed; // how fast the player moves 
 	public float jumpSpeed; // how high player jumps
 
@@ -163,11 +165,30 @@ public class PlayerController : MonoBehaviour {
 
 		if (other.tag == "Door2") {
 			if (BossHealthBar.current == 0) {
+				/*
+				Category -- LevelReached
+				Action --name (e.g. chavashulman@gmail.com)
+				Label -- blank
+				Value -- level # 
+				*/
+				googleAnalytics.LogEvent (new EventHitBuilder ()
+					.SetEventCategory ("LevelReached")
+					.SetEventAction (EnterNameScript.Instance.Name)
+					.SetEventLabel ("")
+					.SetEventValue ("Level 2")); //When we create mode for game, it should be entered HERE
+
 				SceneManager.LoadScene ("Level2");
 			}
 		}
+
 		if (other.tag == "Door3") {
 			if (BossHealthBar.current == 0)
+				googleAnalytics.LogEvent (new EventHitBuilder ()
+					.SetEventCategory ("LevelReached")
+					.SetEventAction (EnterNameScript.Instance.Name)
+					.SetEventLabel ("")
+					.SetEventValue ("Level 3")); //When we create mode for game, it should be entered HERE
+
 				SceneManager.LoadScene ("Level3");
 		}
 		if (other.tag == "Door4") {
