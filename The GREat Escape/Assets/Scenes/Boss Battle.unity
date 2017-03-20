@@ -1941,6 +1941,11 @@ Prefab:
       propertyPath: wrongSound
       value: 
       objectReference: {fileID: 1760673986}
+    - target: {fileID: 114000011855899886, guid: 5d465c69fe5074819a2c00cc65349eac,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d465c69fe5074819a2c00cc65349eac, type: 2}
   m_IsPrefabParent: 0
@@ -2380,6 +2385,11 @@ Prefab:
       propertyPath: m_Name
       value: JITCollider (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010024534820, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
   m_IsPrefabParent: 0
