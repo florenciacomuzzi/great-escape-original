@@ -1954,6 +1954,12 @@ Transform:
   m_PrefabParentObject: {fileID: 4000013516963478, guid: 5d465c69fe5074819a2c00cc65349eac,
     type: 2}
   m_PrefabInternal: {fileID: 451454778}
+--- !u!114 &451454780 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000011855899886, guid: 5d465c69fe5074819a2c00cc65349eac,
+    type: 2}
+  m_PrefabInternal: {fileID: 451454778}
+  m_Script: {fileID: 11500000, guid: d1bb38d56baf7422d839c24ae46c4e75, type: 3}
 --- !u!114 &462185924 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000012738426720, guid: 21848fc50d62046689aa6604051c62ce,
@@ -2622,6 +2628,12 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224000013506510826, guid: b27a758d559374c34a4660239fcaa552,
     type: 2}
   m_PrefabInternal: {fileID: 861671774}
+--- !u!114 &861671776 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000014143115266, guid: b27a758d559374c34a4660239fcaa552,
+    type: 2}
+  m_PrefabInternal: {fileID: 861671774}
+  m_Script: {fileID: 11500000, guid: 795cec88a3b5e4a9abaedf0b4b28bade, type: 3}
 --- !u!1 &864315433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3518,6 +3530,151 @@ Prefab:
       propertyPath: m_FontData.m_MinSize
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010643218132, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: clear
+      value: 
+      objectReference: {fileID: 1616645686}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: fbPanel
+      value: 
+      objectReference: {fileID: 175161806}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 451454780}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossQ
+      value: 
+      objectReference: {fileID: 1442720599}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossHealth
+      value: 
+      objectReference: {fileID: 861671776}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 451454780}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: clear
+      value: 
+      objectReference: {fileID: 1616645686}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: fbPanel
+      value: 
+      objectReference: {fileID: 175161806}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: clear
+      value: 
+      objectReference: {fileID: 1616645686}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: fbPanel
+      value: 
+      objectReference: {fileID: 175161806}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossQ
+      value: 
+      objectReference: {fileID: 1444245704}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 1944064656}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 451454780}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: fbPanel
+      value: 
+      objectReference: {fileID: 175161806}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 1599511267}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossQ
+      value: 
+      objectReference: {fileID: 1444245704}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: clear
+      value: 
+      objectReference: {fileID: 1616645686}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 451454780}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossHealth
+      value: 
+      objectReference: {fileID: 861671776}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossQ
+      value: 
+      objectReference: {fileID: 1444245704}
+    - target: {fileID: 114000012449260622, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 1599511267}
+    - target: {fileID: 114000012960275978, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossHealth
+      value: 
+      objectReference: {fileID: 861671776}
+    - target: {fileID: 114000014200281418, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 1599511267}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: Health
+      value: 
+      objectReference: {fileID: 1599511267}
+    - target: {fileID: 114000010384836856, guid: 21848fc50d62046689aa6604051c62ce,
+        type: 2}
+      propertyPath: bossHealth
+      value: 
+      objectReference: {fileID: 861671776}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 21848fc50d62046689aa6604051c62ce, type: 2}
   m_IsPrefabParent: 0
@@ -4239,7 +4396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb4953183c1749cd9f2a5e8cdd09cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  googleAnalytics: {fileID: 0}
+  googleAnalytics: {fileID: 1944064656}
   numWords: 0
   questionTemp: 
   choice1: 
@@ -4656,6 +4813,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ae04dbe208d27422ca3ac3bfbf71dcdf, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1599511267 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114000010448419574, guid: ae04dbe208d27422ca3ac3bfbf71dcdf,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599511266}
+  m_Script: {fileID: 11500000, guid: 4f8ddec03f27d4d618b9d190aed0bbe7, type: 3}
 --- !u!114 &1609127712 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114000013617396336, guid: 21848fc50d62046689aa6604051c62ce,

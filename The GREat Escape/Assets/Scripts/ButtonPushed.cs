@@ -82,8 +82,8 @@ public class ButtonPushed : MonoBehaviour {
 			print("chose correct answer");
 
 			PlayerPrefs.SetString("CurrentPlayer", Name);
-			
-			googleAnalytics.LogEvent (new EventHitBuilder ()
+
+			googleAnalytics.LogEvent (new EventHitBuilder()
 				.SetEventCategory ("QuestionsAnsweredCorrectly")
 				.SetEventAction (EnterNameScript.Instance.Name)
 				.SetEventLabel (questionID)
