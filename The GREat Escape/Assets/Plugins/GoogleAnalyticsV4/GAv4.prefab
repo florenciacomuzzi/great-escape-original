@@ -42,7 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   androidTrackingCode: 
   IOSTrackingCode: 
-  otherTrackingCode: 
+  otherTrackingCode: UA-93882504-1
   productName: 
   bundleIdentifier: 
   bundleVersion: 
