@@ -1063,6 +1063,11 @@ Prefab:
       propertyPath: wrongSound
       value: 
       objectReference: {fileID: 1128193856}
+    - target: {fileID: 114000011855899886, guid: 5d465c69fe5074819a2c00cc65349eac,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 509878719}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5d465c69fe5074819a2c00cc65349eac, type: 2}
   m_IsPrefabParent: 0
@@ -1360,7 +1365,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 40
+      value: 41
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -1724,7 +1729,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013938790994, guid: a3265449a77d64c95b387f15448fd646, type: 2}
       propertyPath: m_RootOrder
-      value: 46
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 114000011915280782, guid: a3265449a77d64c95b387f15448fd646,
         type: 2}
@@ -2046,6 +2051,54 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -10.1}
   serializedVersion: 2
   m_Size: {x: 150, y: 6}
+--- !u!1001 &509878718
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 497732, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+      propertyPath: m_RootOrder
+      value: 39
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 3e3acd53491f84a9d8cca9e88a55ddfe, type: 2}
+  m_IsPrefabParent: 0
+--- !u!114 &509878719 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11496062, guid: 3e3acd53491f84a9d8cca9e88a55ddfe,
+    type: 2}
+  m_PrefabInternal: {fileID: 509878718}
+  m_Script: {fileID: 11500000, guid: 115515dbbaaea4a6aaf6cbda8b04cb45, type: 3}
 --- !u!1001 &547980488
 Prefab:
   m_ObjectHideFlags: 0
@@ -2230,6 +2283,11 @@ Prefab:
       propertyPath: m_TagString
       value: BossJIT
       objectReference: {fileID: 0}
+    - target: {fileID: 114000010024534820, guid: 0adf965d76c2a481889249d93a68f447,
+        type: 2}
+      propertyPath: googleAnalytics
+      value: 
+      objectReference: {fileID: 509878719}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0adf965d76c2a481889249d93a68f447, type: 2}
   m_IsPrefabParent: 0
@@ -3334,6 +3392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb4953183c1749cd9f2a5e8cdd09cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  googleAnalytics: {fileID: 0}
   numWords: 17
   questionTemp: 
   choice1: 
@@ -4352,7 +4411,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 45
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -4578,7 +4637,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 44
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -4855,7 +4914,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 43
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -5368,7 +5427,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 41
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -5594,7 +5653,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 39
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
@@ -5810,6 +5869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edb4953183c1749cd9f2a5e8cdd09cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  googleAnalytics: {fileID: 509878719}
   numWords: 0
   questionTemp: 
   choice1: 
@@ -6015,6 +6075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89b3bb2a17f0c4471b6069efa5120af8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  googleAnalytics: {fileID: 509878719}
 --- !u!114 &1801066150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6028,8 +6089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showIfPaused: []
   showIfResumed: []
-  panel: {fileID: 0}
-  qCanvas: {fileID: 0}
+  panel: {fileID: 1755290517}
+  qCanvas: {fileID: 1755290514}
 --- !u!114 &1801066151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,7 +6763,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000012703433068, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_RootOrder
-      value: 42
+      value: 43
       objectReference: {fileID: 0}
     - target: {fileID: 1000011636620828, guid: 71cb22043614845b186be16157064930, type: 2}
       propertyPath: m_Name
