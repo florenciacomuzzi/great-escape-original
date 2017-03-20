@@ -81,13 +81,28 @@ public class ButtonPushed : MonoBehaviour {
 		if (chosen == (int)correct_answer) {
 			print("chose correct answer");
 
-			PlayerPrefs.SetString("CurrentPlayer", Name);
+			//PlayerPrefs.SetString("CurrentPlayer", Name);
 
+			EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            eventHitBuilder.SetEventCategory ("Question Answered Correctly");
+            eventHitBuilder.SetEventLabel (questionID);
+            eventHitBuilder.SetEventValue (chosen);
+            string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+			if (playerName != null)
+    			eventHitBuilder.SetEventAction (playerName);
+			else
+    			eventHitBuilder.SetEventAction ("No name");
+            googleAnalytics.LogEvent (eventHitBuilder);
+            
+            //googleAnalytics.LogEvent(eventHitBuilder);​
+
+            /*
 			googleAnalytics.LogEvent (new EventHitBuilder()
 				.SetEventCategory ("QuestionsAnsweredCorrectly")
 				.SetEventAction (EnterNameScript.Instance.Name)
 				.SetEventLabel (questionID)
 				.SetEventValue (chosen)); //When we create mode for game, it should be entered HERE
+			*/
 
 			feedback = getCorrectFeedback();
 			print("feedback received: " + feedback);
@@ -106,15 +121,17 @@ public class ButtonPushed : MonoBehaviour {
 		{	
 			print("chose wrong answer");
 
-			
-		
-
-			PlayerPrefs.SetString("CurrentPlayer", Name);
-			googleAnalytics.LogEvent (new EventHitBuilder ()
-				.SetEventCategory ("QuestionAnsweredIncorrectly")
-				.SetEventAction (EnterNameScript.Instance.Name)
-				.SetEventLabel (questionID)
-				.SetEventValue (chosen)); //When we create mode for game, it should be entered HERE
+			EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            eventHitBuilder.SetEventCategory ("Question Answered Incorrectly");
+            eventHitBuilder.SetEventLabel (questionID);
+            eventHitBuilder.SetEventValue (chosen);
+            string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+			if (playerName != null)
+    			eventHitBuilder.SetEventAction (playerName);
+			else
+    			eventHitBuilder.SetEventAction ("No name");
+    		googleAnalytics.LogEvent (eventHitBuilder);
+           
 
 			feedback = getWrongFeedback();
 			print("feedback received: " + getWrongFeedback());

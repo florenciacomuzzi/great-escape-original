@@ -158,6 +158,7 @@ public class PlayerController : MonoBehaviour {
 				//ReviewScript.updateReviewNum();
 				//ReviewScript.reviewNum++;
 				BookScript.bookControl.setReviewWords ();
+				Debug.Log("Going to review for Level 1");
 				SceneManager.LoadScene ("Review1");
 //				}
 			}
@@ -165,47 +166,88 @@ public class PlayerController : MonoBehaviour {
 
 		if (other.tag == "Door2") {
 			if (BossHealthBar.current == 0) {
+
+				EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            	eventHitBuilder.SetEventCategory ("LevelReached");
+            	eventHitBuilder.SetEventLabel ("");
+            	eventHitBuilder.SetEventValue (2);
+            	string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+				if (playerName != null)
+    				eventHitBuilder.SetEventAction (playerName);
+				else
+    				eventHitBuilder.SetEventAction ("No name");
+    			googleAnalytics.LogEvent (eventHitBuilder);
 				/*
 				Category -- LevelReached
 				Action --name (e.g. chavashulman@gmail.com)
 				Label -- blank
 				Value -- level # 
-				*/
+				
 				googleAnalytics.LogEvent (new EventHitBuilder ()
 					.SetEventCategory ("LevelReached")
 					.SetEventAction (EnterNameScript.Instance.Name)
 					.SetEventLabel ("")
 					.SetEventValue (2)); //When we create mode for game, it should be entered HERE
+				*/
+
 
 				SceneManager.LoadScene ("Level2");
 			}
 		}
 
 		if (other.tag == "Door3") {
-			if (BossHealthBar.current == 0)
+			if (BossHealthBar.current == 0){
+
+				EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            	eventHitBuilder.SetEventCategory ("LevelReached");
+            	eventHitBuilder.SetEventLabel ("");
+            	eventHitBuilder.SetEventValue (3);
+            	string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+				if (playerName != null)
+    				eventHitBuilder.SetEventAction (playerName);
+				else
+    				eventHitBuilder.SetEventAction ("No name");
+    			googleAnalytics.LogEvent (eventHitBuilder);
+
+
+    			/*
 				googleAnalytics.LogEvent (new EventHitBuilder ()
 					.SetEventCategory ("LevelReached")
 					.SetEventAction (EnterNameScript.Instance.Name)
 					.SetEventLabel ("")
 					.SetEventValue (3)); //When we create mode for game, it should be entered HERE
-
+				*/
 				SceneManager.LoadScene ("Level3");
+			}
 		}
+
+
 		if (other.tag == "Door4") {
-			if (BossHealthBar.current == 0)
+			if (BossHealthBar.current == 0){
+
+				EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            	eventHitBuilder.SetEventCategory ("Won");
+            	eventHitBuilder.SetEventLabel ("");
+            	//eventHitBuilder.SetEventValue (2);
+            	string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+				if (playerName != null)
+    				eventHitBuilder.SetEventAction (playerName);
+				else
+    				eventHitBuilder.SetEventAction ("No name");
+    			googleAnalytics.LogEvent (eventHitBuilder);
+				
 				SceneManager.LoadScene ("Win");
+			}
 		}
-			if (other.tag == "KillPlane") {
-				//	gameObject.SetActive (false);
+		if (other.tag == "KillPlane") {
+			//	gameObject.SetActive (false);
+			transform.position = respawnPosition;
+			health.changeBar (5);
+		}
 
-				transform.position = respawnPosition;
-				health.changeBar (5);
-
-			}
-
-			if (other.tag == "Checkpoint") {
-				respawnPosition = other.transform.position;
-			}
+		if (other.tag == "Checkpoint") {
+			respawnPosition = other.transform.position;
+		}
 
 	}
 

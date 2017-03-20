@@ -375,7 +375,19 @@ public class BossQuestions : MonoBehaviour {
 		if (questions[indexUsed[indexUsed.Count-1]].answer.Equals (playerAnswer)) {
 			return true;
 		}
+		/*
 
+		EventHitBuilder eventHitBuilder = new EventHitBuilder();
+            	eventHitBuilder.SetEventCategory (playerAnswer);
+            	eventHitBuilder.SetEventLabel ("");
+            	eventHitBuilder.SetEventValue (2);
+            	string playerName = PlayerPrefs.GetString ("CurrentPlayer");
+				if (playerName != null)
+    				eventHitBuilder.SetEventAction (playerName);
+				else
+    				eventHitBuilder.SetEventAction ("No name");
+    			googleAnalytics.LogEvent (eventHitBuilder);
+		*/
 		
 		googleAnalytics.LogEvent (new EventHitBuilder ()
 			.SetEventCategory (playerAnswer)
